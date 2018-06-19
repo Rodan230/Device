@@ -3,7 +3,7 @@
   src: url("fonts/web/gilroylight.woff") format("woff"),
   url("fonts/web/gilroylight.woff2") format("woff2"),
   url("fonts/gilroy/Gilroylight.ttf") format("truetype");
-  font-weight: 300;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -12,7 +12,7 @@
   src: url("fonts/web/gilroyextrabold.woff") format("woff"),
   url("fonts/web/gilroyextrabold.woff2") format("woff2"),
   url("fonts/gilroy/Gilroyextrabold.ttf") format("truetype");
-  font-weight: 800;
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -21,7 +21,7 @@
   src: url("fonts/web/opensans.woff") format("woff"),
   url("fonts/web/opensans.woff2") format("woff2"),
   url("fonts/open_sans/OpenSans-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -30,6 +30,6 @@
   src: url("fonts/web/opensanslight.woff") format("woff"),
   url("fonts/web/opensanslight.woff2") format("woff2"),
   url("fonts/open_sans/OpenSans-Light.ttf") format("truetype");
-  font-weight: 300;
+  font-weight: lighter;
   font-style: normal;
 }

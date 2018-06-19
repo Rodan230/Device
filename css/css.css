@@ -1,8 +1,11 @@
 body {
-  font-family: "Gilroy", "Open Sans", sans-serif;
+  font-family: "Open Sans", "Times New Roman" sans-serif;
   font-size: 15px;
+  font-weight: 300;
   background-color: #fff;
 }
 .header-logo {
   font-size: 48px;
+  font-family:"Gilroy", "Arial", sans-serif;
+  font-weight: 800;
 }
