@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link href='css/css.css' rel = 'stylesheet'>
+    <link rel="stylesheet" href="css/css.css">
     <title>Device</title>
 </head>
 <body>
   <header class="main-header">
-    <span class="header-logo logo">DEVICE</span>
+    <span class="header-logo">DEVICE</span>
     <nav class="header-nav">
       <div class="header-nav-top">
         <form class="header-search" action="https://echo.htmlacademy.ru" method="post">
-          <button type="submit">Искать</button>
           <input type="search" name="header-search-field" value="" placeholder="Поиск по сайту">
+          <button class="search-submit" type="submit">Найти</button>
         </form>
         <ul class="header-nav-user">
           <li><a href="">Войти</a></li>
@@ -159,31 +160,31 @@
 
     <section class="services-slider">
       <h2 class="visually-hidden">Услуги</h2>
-      <ul>
+      <ul class="services-slider-list">
         <li class="slide-radio">
-          <button class="slide-btn-2" type="button">Доставка</button>
+          <button type="button">Доставка</button>
         </li>
-        <li>
-          <button type="button" name="button">Гарантия</button>
+        <li class="slide-radio">
+          <button type="button">Гарантия</button>
         </li>
-        <li>
-          <button type="button" name="button">Кредит</button>
+        <li class="slide-radio">
+          <button type="button">Кредит</button>
         </li>
       </ul>
       <section class="services-slider-item">
-        <h3>Доставка</h3>
+        <h3 class="services-name">Доставка</h3>
         <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
         <img width="136px" height="164px" src="img/delivery.svg" alt="">
       </section>
 
       <section class="services-slider-item">
-        <h3>Гарантия</h3>
+        <h3 class="services-name">Гарантия</h3>
         <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
         <img width="136px" height="164px" src="img/warranty.svg" alt="">
       </section>
 
       <section class="services-slider-item">
-        <h3>Кредит</h3>
+        <h3 class="services-name">Кредит</h3>
         <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
         <img width="136px" height="164px" src="img/credit.svg" alt="">
       </section>

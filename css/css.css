@@ -1,11 +1,86 @@
 body {
-  font-family: "Open Sans", "Times New Roman" sans-serif;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #000;
   background-color: #fff;
 }
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 .header-logo {
+  font-family: Gilroy, Arial, sans-serif;
+  font-weight: 800;
   font-size: 48px;
-  font-family:"Gilroy", "Arial", sans-serif;
+  line-height: 48px;
+}
+.header-search>input{
+  border: none;
+  background-color: inherit;
+}
+.header-search>input::placeholder{
+  opacity: .3;
+}
+.header-search:hover input::placeholder {
+  opacity: .6;
+}
+.header-search>input:focus{
+  outline: none;
+  border-bottom: 1px solid black;
+}
+.search-submit {
+  border: 1px solid black;
+  opacity: 0.0;
+  cursor: pointer;
+  background-color:inherit;
+}
+.header-search>input:focus ~button{
+  opacity:1;
+}
+.search-submit:hover{
+  opacity:1;
+  background-color: #000;
+  color:#fff;
+}
+.search-submit:active{
+  opacity:1;
+  background-color: #000;
+  color: rgba(255,255,255,0.3);
+}
+
+.header-nav-user {
+  list-style-type: none;
+}
+.header-nav-user>li:hover, .header-nav-site>li:hover {
+  opacity: .6;
+}
+.header-nav-user>li:active, .header-nav-site>li:active{
+  opacity: .3;
+}
+.header-nav-site {
+  list-style-type: none;
+}
+.main-header {
+  background-color: #f7e196;
+}
+.promo-slider-item-id {
+  font-size: 179px;
+  letter-spacing: 2px;
+  line-height: 179px;
+  color: #EEE;
+  font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
 }
