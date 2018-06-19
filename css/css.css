@@ -13,7 +13,9 @@ body {
 a {
   text-decoration: none;
 }
-
+a:visited {
+  color: #000;
+}
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -84,3 +86,48 @@ a {
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
 }
+.promo-slider-slogan {
+  font-size: 47px;
+  line-height: 56px;
+  font-family: "Gilroy";
+  font-weight: 800;
+}
+.promo-slider-desc{
+  color: rgb(70,70,70)
+}
+.button-main-style, .slide-radio {
+  font-size: 18px;
+  letter-spacing: 4px;
+  line-height: 24px;
+  font-family: "Gilroy";
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #f0c42e;
+}
+.promo-slider-table th{
+  font-size: 36px;
+  line-height: 48px;
+  font-family: "Gilroy";
+  font-weight: 300;
+}
+.promo-slider-table td{
+  font-size: 13px;
+  line-height: 20px;
+  color: rgb(70,70,70);
+}
+.catalog-main-list>li{
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Gilroy";
+  font-weight: 800;
+  background-color: #f7e196;
+}
+.catalog-main-list>li:hover, .catalog-main-list>li:focus,
+.catalog-main-list>li:active{
+  background-color: #f0c42e;
+}
+.catalog-main-list a:active img, .catalog-main-list a:active p{
+  opacity: .3;
+}
+.slide
