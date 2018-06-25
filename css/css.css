@@ -14,7 +14,7 @@ a {
   text-decoration: none;
 }
 a:visited {
-  color: #000;
+  color: inherit;
 }
 .visually-hidden {
   position: absolute;
@@ -23,11 +23,17 @@ a:visited {
   height: 1px;
   margin: -1px;
 }
-.header-logo {
+.site-logo{
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
   font-size: 48px;
   line-height: 48px;
+}
+.site-logo:hover{
+  opacity: .6;
+}
+.site-logo:active{
+  opacity: .3;
 }
 .header-search>input{
   border: none;
@@ -63,16 +69,16 @@ a:visited {
   color: rgba(255,255,255,0.3);
 }
 
-.header-nav-user {
+.header-nav-user-list {
   list-style-type: none;
 }
-.header-nav-user>li:hover, .header-nav-site>li:hover {
+.header-nav-user-list>li:hover, .header-nav-site-list>li:hover {
   opacity: .6;
 }
-.header-nav-user>li:active, .header-nav-site>li:active{
+.header-nav-user-list>li:active, .header-nav-site-list>li:active{
   opacity: .3;
 }
-.header-nav-site {
+.header-nav-site-list {
   list-style-type: none;
 }
 .main-header {
@@ -104,6 +110,7 @@ a:visited {
   text-align: center;
   text-transform: uppercase;
   background-color: #f0c42e;
+  border: none;
 }
 .promo-slider-table th{
   font-size: 36px;
@@ -136,10 +143,10 @@ a:visited {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
 }
-.logo {
+.brand-logo {
   filter: grayscale(100%) opacity(20%);
 }
-.logo:hover {
+.brand-logo:hover {
   filter: grayscale(0%) opacity(100%);
 }
 .services-desc, .about-us>p,
@@ -151,4 +158,89 @@ a:visited {
   line-height: 24px;
   font-family: "Gilroy";
   font-weight: 800;
+}
+.main-footer {
+  background-color: #454545;
+  color: #ffffff;
+}
+.main-footer .site-logo {
+  color: #ffc600;
+}
+.footer-nav-user-list{
+  list-style-type: none;
+}
+.footer-nav-user-list>li{
+  opacity: .7;
+}
+.footer-nav-user-list>li:hover{
+  opacity: 1;
+}
+.footer-nav-user-list>li:active{
+  opacity: .3;
+}
+.footer-nav-site-list{
+  list-style-type: none;
+  font-size: 18px;
+  letter-spacing: 4px;
+  line-height: 24px;
+  font-family: "Gilroy";
+  font-weight: 800;
+}
+.footer-nav-site-list>li:hover {
+  opacity: .6;
+}
+.footer-nav-site-list>li:active {
+  opacity: .3;
+}
+.social-media img{
+  opacity: .3;
+}
+.social-media img:hover{
+  opacity: .6;
+}
+.social-media img:active{
+  opacity: .1;
+}
+.copyright-info:hover{
+  opacity:.6;
+}
+.copyright-info:active{
+  opacity:.3;
+}
+.modal-write-us label{
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Gilroy";
+  font-weight: 800;
+}
+.modal-write-us input{
+  background-color: #f2f2f2;
+  border:none;
+}
+.modal-write-us input::placeholder{
+  font-size: 14px;
+  line-height: 18px;
+  color: rgb(70,70,70);
+  opacity: .4;
+}
+.modal-write-us input:hover{
+  background-color: #eaeaea;
+}
+.modal-write-us input:focus{
+  background-color: inherit;
+  outline: 3px solid #f7e296;
+}
+.modal-write-us input:invalid{
+  background-color: #f5d9d9;
+}
+.button-close{
+  opacity:.5;
+  border:none;
+  outline: none;
+}
+.button-close:hover{
+  opacity:1;
+}
+.button-close:active{
+  opacity:.3;
 }
