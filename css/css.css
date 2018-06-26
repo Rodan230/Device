@@ -1,7 +1,5 @@
+/* Общие стили */
 body {
-  margin: 0;
-  padding: 0;
-
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   font-weight: 300;
@@ -23,68 +21,84 @@ a:visited {
   height: 1px;
   margin: -1px;
 }
-.site-logo{
-  font-family: Gilroy, Arial, sans-serif;
+/* Хэдер */
+.site-logo {
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 48px;
   line-height: 48px;
 }
-.site-logo:hover{
+.site-logo:hover {
   opacity: .6;
 }
-.site-logo:active{
+.site-logo:active {
   opacity: .3;
 }
-.header-search>input{
+.search-form>input {
   border: none;
   background-color: inherit;
 }
-.header-search>input::placeholder{
+.search-form>input::placeholder {
   opacity: .3;
 }
-.header-search:hover input::placeholder {
+.search-form:hover input::placeholder {
   opacity: .6;
 }
-.header-search>input:focus{
+.search-form>input:focus {
   outline: none;
   border-bottom: 1px solid black;
 }
-.search-submit {
+.search-btn {
   border: 1px solid black;
   opacity: 0.0;
   cursor: pointer;
   background-color:inherit;
 }
-.header-search>input:focus ~button{
+.search-form>input:focus ~.search-btn {
   opacity:1;
 }
-.search-submit:hover{
+.search-btn:hover {
   opacity:1;
   background-color: #000;
   color:#fff;
 }
-.search-submit:active{
+.search-btn:active {
   opacity:1;
   background-color: #000;
   color: rgba(255,255,255,0.3);
 }
-
-.header-nav-user-list {
+.user-navigation {
   list-style-type: none;
 }
-.header-nav-user-list>li:hover, .header-nav-site-list>li:hover {
+.site-navigation {
+  list-style-type: none;
+  font-size: 18px;
+  letter-spacing: 4px;
+  line-height: 24px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+}
+.site-navigation__catalog {
+  list-style-type: none;
+  font-size: 15px;
+  letter-spacing: 0px;
+  line-height: 36px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+}
+.user-navigation>li>a:hover, .site-navigation>li>a:hover,
+.site-navigation__catalog>li:hover {
   opacity: .6;
 }
-.header-nav-user-list>li:active, .header-nav-site-list>li:active{
+.user-navigation>li>a:active, .site-navigation>li>a:active,
+.site-navigation__catalog>li:active {
   opacity: .3;
-}
-.header-nav-site-list {
-  list-style-type: none;
 }
 .main-header {
   background-color: #f7e196;
 }
-.promo-slider-item-id {
+/* Бади */
+.promo-item__number {
   font-size: 179px;
   letter-spacing: 2px;
   line-height: 179px;
@@ -92,16 +106,16 @@ a:visited {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
 }
-.promo-slider-slogan {
+.promo-item__slogan {
   font-size: 47px;
   line-height: 56px;
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
 }
-.promo-slider-desc{
+.promo-item__desc {
   color: rgb(70,70,70)
 }
-.button-main-style, .slide-radio {
+.btn_style {
   font-size: 18px;
   letter-spacing: 4px;
   line-height: 24px;
@@ -112,53 +126,56 @@ a:visited {
   background-color: #f0c42e;
   border: none;
 }
-.promo-slider-table th{
+.promo-item__table th {
   font-size: 36px;
   line-height: 48px;
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 300;
 }
-.promo-slider-table td{
+.promo-item__table td {
   font-size: 13px;
   line-height: 20px;
   color: rgb(70,70,70);
 }
-.catalog-main-list>li{
+.categories-list>li {
   font-size: 18px;
   line-height: 24px;
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   background-color: #f7e196;
 }
-.catalog-main-list>li:hover, .catalog-main-list>li:focus,
-.catalog-main-list>li:active{
+.categories-list>li:hover, .categories-list>li:focus,
+.categories-list>li:active {
   background-color: #f0c42e;
 }
-.catalog-main-list a:active img, .catalog-main-list a:active p{
+.categories-list a:active img, .categories-list a:active p{
   opacity: .3;
 }
-.services-name {
+.services-item__name {
   font-size: 47px;
   line-height: 48px;
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
 }
-.brand-logo {
+.services-item__desc {
+  color: rgb(70,70,70);
+}
+.brands__logo {
   filter: grayscale(100%) opacity(20%);
 }
-.brand-logo:hover {
+.brands__logo:hover {
   filter: grayscale(0%) opacity(100%);
-}
-.services-desc, .about-us>p,
-.contacts>p{
-  color: rgb(70,70,70)
 }
 .about-us>ul {
   font-size: 18px;
   line-height: 24px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
 }
+.about-us>p, .contacts>p {
+  color: rgb(70,70,70)
+}
+/* Футер */
 .main-footer {
   background-color: #454545;
   color: #ffffff;
@@ -166,51 +183,52 @@ a:visited {
 .main-footer .site-logo {
   color: #ffc600;
 }
-.footer-nav-user-list{
-  list-style-type: none;
-}
-.footer-nav-user-list>li{
+.footer>.user-navigation>li {
   opacity: .7;
 }
-.footer-nav-user-list>li:hover{
+.footer>.user-navigation>li:hover {
   opacity: 1;
 }
-.footer-nav-user-list>li:active{
+.footer>.user-navigation>li:active {
   opacity: .3;
 }
-.footer-nav-site-list{
+.footer>.site-navigation {
   list-style-type: none;
   font-size: 18px;
   letter-spacing: 4px;
   line-height: 24px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
 }
-.footer-nav-site-list>li:hover {
+.footer>.site-navigation>li:hover {
   opacity: .6;
 }
-.footer-nav-site-list>li:active {
+.footer>.site-navigation>li:active {
   opacity: .3;
 }
-.social-media img{
+.social-links ul {
+  list-style-type: none;
+}
+.social-links img {
   opacity: .3;
 }
-.social-media img:hover{
+.social-links img:hover {
   opacity: .6;
 }
-.social-media img:active{
+.social-links img:active {
   opacity: .1;
 }
-.copyright-info:hover{
+.copyright:hover {
   opacity:.6;
 }
-.copyright-info:active{
+.copyright:active {
   opacity:.3;
 }
+/* Модальные окна */
 .modal-write-us label{
   font-size: 18px;
   line-height: 24px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
 }
 .modal-write-us input{
@@ -233,14 +251,14 @@ a:visited {
 .modal-write-us input:invalid{
   background-color: #f5d9d9;
 }
-.button-close{
+.btn-close{
   opacity:.5;
   border:none;
   outline: none;
 }
-.button-close:hover{
+.btn-close:hover{
   opacity:1;
 }
-.button-close:active{
+.btn-close:active{
   opacity:.3;
 }
