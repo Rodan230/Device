@@ -1,4 +1,3 @@
-/* Общие стили */
 body {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
@@ -14,6 +13,11 @@ a {
 a:visited {
   color: inherit;
 }
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -21,7 +25,20 @@ a:visited {
   height: 1px;
   margin: -1px;
 }
-/* Хэдер */
+.btn_style {
+  font-size: 18px;
+  letter-spacing: 4px;
+  line-height: 24px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #f0c42e;
+  border: none;
+}
+.main-header {
+  background-color: #f7e196;
+}
 .site-logo {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
@@ -34,70 +51,80 @@ a:visited {
 .site-logo:active {
   opacity: .3;
 }
-.search-form>input {
+.search-form__input {
   border: none;
   background-color: inherit;
 }
-.search-form>input::placeholder {
-  opacity: .3;
+.search-form__input::placeholder {
+  opacity: 6;
 }
-.search-form:hover input::placeholder {
-  opacity: .6;
-}
-.search-form>input:focus {
+.search-form__input:focus {
   outline: none;
   border-bottom: 1px solid black;
 }
-.search-btn {
+.search-form__input:focus ~ .search-form__btn {
+  opacity: 1;
+}
+.search-form:hover .search-form__input::placeholder {
+  opacity: 6;
+}
+.search-form__btn {
   border: 1px solid black;
   opacity: 0.0;
   cursor: pointer;
-  background-color:inherit;
+  background-color: inherit;
 }
-.search-form>input:focus ~.search-btn {
-  opacity:1;
-}
-.search-btn:hover {
-  opacity:1;
+.search-form__btn:hover {
+  opacity: 1;
   background-color: #000;
-  color:#fff;
+  color: #fff;
 }
-.search-btn:active {
-  opacity:1;
+.search-form__btn:active {
+  opacity: 1;
   background-color: #000;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
-.user-navigation {
+.user-nav {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-.site-navigation {
+.user-nav__item:hover {
+  opacity: 0.6;
+}
+.user-nav__item:active {
+  opacity: .3;
+}
+.site-nav {
   list-style-type: none;
   font-size: 18px;
   letter-spacing: 4px;
   line-height: 24px;
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
+  text-transform: uppercase;
 }
-.site-navigation__catalog {
+.site-nav__item:hover {
+  opacity: .6;
+}
+.site-nav__item:active {
+  opacity: .3;
+}
+.site-nav__catalog {
   list-style-type: none;
   font-size: 15px;
   letter-spacing: 0px;
   line-height: 36px;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 300;
+  text-transform: capitalize;
 }
-.user-navigation>li>a:hover, .site-navigation>li>a:hover,
-.site-navigation__catalog>li:hover {
-  opacity: .6;
+.site-nav__catalog a:hover {
+  opacity: 0.6;
 }
-.user-navigation>li>a:active, .site-navigation>li>a:active,
-.site-navigation__catalog>li:active {
+.site-nav__catalog a:active {
   opacity: .3;
 }
-.main-header {
-  background-color: #f7e196;
-}
-/* Бади */
 .promo-item__number {
   font-size: 179px;
   letter-spacing: 2px;
@@ -113,18 +140,7 @@ a:visited {
   font-weight: 800;
 }
 .promo-item__desc {
-  color: rgb(70,70,70)
-}
-.btn_style {
-  font-size: 18px;
-  letter-spacing: 4px;
-  line-height: 24px;
-  font-family: "Gilroy", Arial, sans-serif;
-  font-weight: 800;
-  text-align: center;
-  text-transform: uppercase;
-  background-color: #f0c42e;
-  border: none;
+  color: #464646;
 }
 .promo-item__table th {
   font-size: 36px;
@@ -135,20 +151,22 @@ a:visited {
 .promo-item__table td {
   font-size: 13px;
   line-height: 20px;
-  color: rgb(70,70,70);
+  color: #464646;
 }
-.categories-list>li {
+.categories-item {
   font-size: 18px;
   line-height: 24px;
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   background-color: #f7e196;
 }
-.categories-list>li:hover, .categories-list>li:focus,
-.categories-list>li:active {
+.categories-item:hover,
+.categories-item:focus,
+.categories-item:active {
   background-color: #f0c42e;
 }
-.categories-list a:active img, .categories-list a:active p{
+.categories-item__anchor:active img,
+.categories-item__anchor:active p {
   opacity: .3;
 }
 .services-item__name {
@@ -158,7 +176,7 @@ a:visited {
   font-weight: 800;
 }
 .services-item__desc {
-  color: rgb(70,70,70);
+  color: #464646;
 }
 .brands__logo {
   filter: grayscale(100%) opacity(20%);
@@ -166,16 +184,21 @@ a:visited {
 .brands__logo:hover {
   filter: grayscale(0%) opacity(100%);
 }
-.about-us>ul {
+.about-us__delivery-services {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   font-size: 18px;
   line-height: 24px;
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
 }
-.about-us>p, .contacts>p {
-  color: rgb(70,70,70)
+.about-us p {
+  color: #464646;
 }
-/* Футер */
+.contacts p {
+  color: #464646;
+}
 .main-footer {
   background-color: #454545;
   color: #ffffff;
@@ -183,16 +206,16 @@ a:visited {
 .main-footer .site-logo {
   color: #ffc600;
 }
-.footer>.user-navigation>li {
+.main-footer .user-nav__item {
   opacity: .7;
 }
-.footer>.user-navigation>li:hover {
+.main-footer .user-nav__item:hover {
   opacity: 1;
 }
-.footer>.user-navigation>li:active {
+.main-footer .user-nav__item:active {
   opacity: .3;
 }
-.footer>.site-navigation {
+.main-footer .site-nav {
   list-style-type: none;
   font-size: 18px;
   letter-spacing: 4px;
@@ -200,65 +223,66 @@ a:visited {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
 }
-.footer>.site-navigation>li:hover {
+.main-footer .site-nav__item:hover {
   opacity: .6;
 }
-.footer>.site-navigation>li:active {
+.main-footer .site-nav__item:active {
   opacity: .3;
 }
-.social-links ul {
+.social {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-.social-links img {
+.social__link img {
   opacity: .3;
 }
-.social-links img:hover {
+.social__link img:hover {
   opacity: .6;
 }
-.social-links img:active {
-  opacity: .1;
+.social__link img:active {
+  opacity: 1;
 }
 .copyright:hover {
-  opacity:.6;
+  opacity: .6;
 }
 .copyright:active {
-  opacity:.3;
+  opacity: .3;
 }
-/* Модальные окна */
-.modal-write-us label{
+.modal-write-us__form label {
   font-size: 18px;
   line-height: 24px;
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
 }
-.modal-write-us input{
+.modal-write-us__form input {
   background-color: #f2f2f2;
-  border:none;
+  border: none;
 }
-.modal-write-us input::placeholder{
+.modal-write-us__form input::placeholder {
   font-size: 14px;
   line-height: 18px;
-  color: rgb(70,70,70);
+  color: #464646;
   opacity: .4;
 }
-.modal-write-us input:hover{
+.modal-write-us__form input:hover {
   background-color: #eaeaea;
 }
-.modal-write-us input:focus{
+.modal-write-us__form input:focus {
   background-color: inherit;
   outline: 3px solid #f7e296;
 }
-.modal-write-us input:invalid{
+.modal-write-us__form input:invalid {
   background-color: #f5d9d9;
 }
-.btn-close{
-  opacity:.5;
-  border:none;
+.modal .btn-close {
+  opacity: .5;
+  border: none;
   outline: none;
 }
-.btn-close:hover{
-  opacity:1;
+.modal .btn-close:hover {
+  opacity: 1;
 }
-.btn-close:active{
-  opacity:.3;
+.modal .btn-close:active {
+  opacity: .3;
 }
