@@ -4,42 +4,48 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/css-rewrite.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Device</title>
   </head>
   <body>
-    <header class="main-header">
-      <nav class="main-nav">
-        <span class="site-logo">DEVICE</span>
-        <div class="main-nav__row-1">
-          <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-            <input class="search-form__input" type="search" name="search-value"  placeholder="Поиск по сайту">
-            <button class="search-form__btn" type="submit">Найти</button>
-          </form>
-          <ul class="user-nav">
-            <li><a class="user-nav__item" href="#">Войти</a></li>
-            <li><a class="user-nav__item" href="#">Сравнить</a></li>
-            <li><a class="user-nav__item" href="#">Корзина</a></li>
-          </ul>
-        </div>
-        <div class="main-nav__row-2">
+    <header class="main-header container">
+      <div class="container-small">
+        <nav class="main-nav">
+          <span class="site-logo">DEVICE</span>
+          <div class="main-nav__row">
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+              <input class="search-form__input" type="search" name="search-value"  placeholder="Поиск по сайту">
+              <button class="search-form__btn" type="submit">Найти</button>
+            </form>
+            <ul class="user-nav">
+              <li><a class="user-nav__item" href="#">Войти</a></li>
+              <li><a class="user-nav__item" href="#">Сравнить</a></li>
+              <li><a class="user-nav__item" href="#">Корзина</a></li>
+            </ul>
+          </div>
           <ul class="site-nav">
-            <li><a class="site-nav__item site-nav__catalog_key" href="#">Каталог товаров</a>
+            <li class="site-nav__catalog_key"><a class="site-nav__item " href="#">Каталог товаров</a>
               <ul class="site-nav__catalog">
-                <li><a href="#">Виртуальная реальность</a></li>
-                <li><a href="#">Моноподы для селфи</a></li>
-                <li><a href="#">Экшн-камеры</a></li>
-                <li><a href="#">Фитнес-браслеты</a></li>
-                <li><a href="#">Умные часы</a></li>
-                <li><a href="#">Квадрокоптеры</a></li>
+                <li>
+                  <a href="#">Виртуальная реальность</a>
+                  <a href="#">Моноподы для селфи</a>
+                  <a href="#">Экшн-камеры</a>
+                </li>
+                <li>
+                  <a href="#">Фитнес-браслеты</a>
+                  <a href="#">Умные часы</a>
+                </li>
+                <li>
+                  <a href="#">Квадрокоптеры</a>
+                </li>
               </ul>
             </li>
-            <li><a class="site-nav__item"  href="#">Доставка</a></li>
+            <li><a class="site-nav__item" href="#">Доставка</a></li>
             <li><a class="site-nav__item" href="#">Гарантия</a></li>
             <li><a class="site-nav__item" href="#">Контакты</a></li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
     <main>
       <h1 class="visually-hidden">Сайт магазина Device</h1>
@@ -168,11 +174,11 @@
 
       <section class="brands">
         <h2 class="visually-hidden">В продаже таки бренды, как:</h2>
-        <ul>
-          <li class="brands__logo"><img width="260px" height="100px" src="img/logo-1.jpg" alt="DJI"></li>
-          <li class="brands__logo"><img width="260px" height="100px" src="img/logo-2.jpg" alt="SP Gadgets"></li>
-          <li class="brands__logo"><img width="260px" height="100px" src="img/logo-3.jpg" alt="GoPro"></li>
-          <li class="brands__logo"><img width="260px" height="100px" src="img/logo-4.jpg" alt="Vive"></li>
+        <ul class="brands-list">
+          <li class="brands-list__item"><img width="260px" height="100px" src="img/logo-1.jpg" alt="DJI"></li>
+          <li class="brands-list__item"><img width="260px" height="100px" src="img/logo-2.jpg" alt="SP Gadgets"></li>
+          <li class="brands-list__item"><img width="260px" height="100px" src="img/logo-3.jpg" alt="GoPro"></li>
+          <li class="brands-list__item"><img width="260px" height="100px" src="img/logo-4.jpg" alt="Vive"></li>
         </ul>
       </section>
 
@@ -231,5 +237,29 @@
         </div>
       </nav>
     </footer>
+    <section class="modal-write-us">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <form class="modal-write-us__form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="write-name">Ваше имя:</label>
+          <input id="write-name" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="write-email">Ваш e-mail:</label>
+          <input id="write-email" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="write-letter">Текст письма:</label>
+          <input id="write-letter" type="text" name="letter" placeholder="В свободной форме">
+        </p>
+        <button class="btn_style" type="submit">Отправить</button>
+      </form>
+      <button class="btn_close" type="button" name="close-form">Закрыть</button>
+    </section>
+    <section class="modal-map">
+      <h2 class="visually-hidden">Как к нам проехать:</h2>
+      <img src="img/map-big.jpg" alt="Адрес: Москва, улица Строителей 15">
+      <button class="btn_close" type="button" name="close-form">Закрыть</button>
+    </section>
   </body>
 </html>

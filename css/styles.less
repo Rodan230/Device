@@ -10,6 +10,9 @@ body {
 }
 a {
   text-decoration: none;
+  &:link {
+    color: inherit;
+  }
   &:visited {
     color: inherit;
   }
@@ -101,12 +104,19 @@ a {
 }
 .site-nav {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
   font-size: 18px;
   letter-spacing: 4px;
   line-height: 24px;
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   text-transform: uppercase;
+  position: relative;
+  &__catalog_key:hover &__catalog {
+    display: flex;
+    justify-content: flex-start;
+  }
   &__item {
     &:hover {
       opacity: .6;
@@ -115,7 +125,12 @@ a {
       opacity: .3;
     }
   }
+
   &__catalog {
+    display: none;
+    position: absolute;
+    padding: 0;
+    margin: 0;
     list-style-type: none;
     font-size: 15px;
     letter-spacing: 0px;
@@ -123,6 +138,11 @@ a {
     font-family: "Open Sans", Arial, sans-serif;
     font-weight: 300;
     text-transform: capitalize;
+    li {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
     a {
       &:hover {
         opacity: 0.6;
@@ -135,70 +155,94 @@ a {
 }
 
 // Контент:
-.promo-item {
-  &__number {
-    font-size: 179px;
-    letter-spacing: 2px;
-    line-height: 179px;
-    color: #EEE;
-    font-family: "Gilroy", Arial, sans-serif;
-    font-weight: 800;
+.promo {
+  .promo-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    .promo-item {
+      &__number {
+        font-size: 179px;
+        letter-spacing: 2px;
+        line-height: 179px;
+        color: #EEE;
+        font-family: "Gilroy", Arial, sans-serif;
+        font-weight: 800;
+      }
+      &__slogan {
+        font-size: 47px;
+        line-height: 56px;
+        font-family: "Gilroy", Arial, sans-serif;
+        font-weight: 800;
+      }
+      &__desc {
+        color: rgb(70,70,70)
+      }
+      &__table {
+        th {
+          font-size: 36px;
+          line-height: 48px;
+          font-family: "Gilroy", Arial, sans-serif;
+          font-weight: 300;
+        }
+        td {
+          font-size: 13px;
+          line-height: 20px;
+          color: rgb(70,70,70);
+        }
+      }
+    }
   }
-  &__slogan {
-    font-size: 47px;
-    line-height: 56px;
-    font-family: "Gilroy", Arial, sans-serif;
-    font-weight: 800;
+}
+
+.categories {
+  .categories-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    .categories-item {
+      font-size: 18px;
+      line-height: 24px;
+      font-family: "Gilroy", Arial, sans-serif;
+      font-weight: 800;
+      background-color: #f7e196;
+      &:hover, &:focus,
+      &:active {
+        background-color: #f0c42e;
+      }
+      &__anchor {
+        &:active img, &:active p {
+          opacity: .3;
+        }
+      }
+    }
   }
-  &__desc {
-    color: rgb(70,70,70)
-  }
-  &__table {
-    th {
-      font-size: 36px;
+}
+
+.services {
+  .services-item {
+    &__name {
+      font-size: 47px;
       line-height: 48px;
       font-family: "Gilroy", Arial, sans-serif;
-      font-weight: 300;
+      font-weight: 800;
     }
-    td {
-      font-size: 13px;
-      line-height: 20px;
+    &__desc {
       color: rgb(70,70,70);
     }
   }
 }
-.categories-item {
-  font-size: 18px;
-  line-height: 24px;
-  font-family: "Gilroy", Arial, sans-serif;
-  font-weight: 800;
-  background-color: #f7e196;
-  &:hover, &:focus,
-  &:active {
-    background-color: #f0c42e;
-  }
-  &__anchor {
-    &:active img, &:active p {
-      opacity: .3;
-    }
-  }
-}
-.services-item {
-  &__name {
-    font-size: 47px;
-    line-height: 48px;
-    font-family: "Gilroy", Arial, sans-serif;
-    font-weight: 800;
-  }
-  &__desc {
-    color: rgb(70,70,70);
-  }
-}
+
 .brands {
-  &__logo {
-    filter: grayscale(100%) opacity(20%);
-    &:hover {
-      filter: grayscale(0%) opacity(100%);
+  .brands-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    &__item {
+      filter: grayscale(100%) opacity(20%);
+      &:hover {
+        filter: grayscale(0%) opacity(100%);
+      }
     }
   }
 }
@@ -325,3 +369,76 @@ a {
   }
 }
 // Разметка:
+body {
+  min-width: 1200px;
+  min-height: 2800px;
+}
+
+.main-header {
+  height: 300px;
+  background-color: #f7e196;
+  margin-top: 40px !important;
+  position: relative;
+}
+.container {
+  width: 1160px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.container-small {
+    width: 1040px;
+    padding: 0;
+    margin: 0 auto;
+}
+.main-nav{
+  padding-top: 40px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  .site-logo {
+    position: absolute;
+    top: -25px;
+    left: 60px;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    .search-form {
+      flex: 1.2;
+    }
+    .user-nav {
+      display:flex;
+      justify-content: space-between;
+      flex: 1;
+      li {
+        margin: 0 20px;
+        &:first-child {
+          margin-left: 0;
+          flex: .8;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .site-nav {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    li {
+      margin: 0 20px;
+      &:first-child {
+        flex: 2.8;
+        margin-left: 0;
+      }
+      &:last-child {
+        flex: 1;
+        text-align: right;
+        margin-right: 0;
+      }
+    }
+  }
+}
