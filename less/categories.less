@@ -1,0 +1,105 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+//
+// Список категорий товаров
+//
+.categories {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  top: -5px;
+  margin-bottom: 75px;
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  &__item {
+    width: 160px;
+    min-height: 240px;
+
+    &-link {
+      display: flex;
+      flex-flow: column nowrap;
+      &:hover {
+        .categories__img-wrapper {
+          background-color: #f0c52e;
+        }
+      }
+      &:active {
+        .categories__img-wrapper {
+          background-color: #f0c52e;
+        }
+        .categories__img {
+          opacity: 0.3;
+        }
+        .categories__item-name {
+          opacity: 0.3;
+        }
+      }
+    }
+    &-name {
+      margin: 0;
+      order: 2;
+      font-family: Gilroy, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      color: #000000;
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &-wrapper {
+      height: 160px;
+      width: 160px;
+      background-color: #f7e196;
+      position: relative;
+      order: 1;
+      margin-bottom: 33px;
+      transition: background-color 0.3s;
+      &-down .categories__img {
+        top: 100%;
+        transform: translate(-50%, -100%;);
+      }
+    }
+  }
+}

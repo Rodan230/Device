@@ -17,7 +17,7 @@
 }
 
 @font-face {
-  font-family: "Open Sans"
+  font-family: "OpenSans"
   src: url("fonts/web/opensans.woff") format("woff"),
   url("fonts/web/opensans.woff2") format("woff2"),
   /* url("fonts/open_sans/OpenSans-Regular.ttf") format("truetype"); */
@@ -26,7 +26,7 @@
 }
 
 @font-face {
-  font-family: "Open Sans"
+  font-family: "OpenSans"
   src: url("fonts/web/opensanslight.woff") format("woff"),
   url("fonts/web/opensanslight.woff2") format("woff2"),
   /* url("fonts/open_sans/OpenSans-Light.ttf") format("truetype"); */
