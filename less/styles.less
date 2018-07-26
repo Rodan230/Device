@@ -39,10 +39,9 @@ input[type="radio"].visually-hidden {
 
 .index-header {
   // Общая типографика блока
-  font-family: OpenSans, Arial, sans-serif;
+  font-family: "OpenSans-light", Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
-  font-weight: 300;
   letter-spacing: 0.01em;
   color: #000000;
   //
@@ -57,10 +56,9 @@ input[type="radio"].visually-hidden {
   &__logo {
     width: 164px;
     height: 36px;
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: "Gilroy-extrabold", Arial, sans-serif;
     font-size: 48px;
     line-height: 48px;
-    font-weight: 800;
     letter-spacing: 0.01em;
     color: #000000;
     text-transform: uppercase;
@@ -96,13 +94,13 @@ input[type="radio"].visually-hidden {
       }
       &--login {
         padding-left: 27px;
-        margin-right: 218px;
+        margin-right: 216px;
         position: relative;
         &::before {
           content: "";
           position: absolute;
           left: 0px;
-          top: 8px;
+          top: 9px;
           width: 13px;
           height: 12px;
           background-image: url("../img/user.svg");
@@ -111,13 +109,12 @@ input[type="radio"].visually-hidden {
       }
       &--compare {
         padding-left: 20px;
-        margin-right: 41px;
         position: relative;
         &::before {
           content: "";
           position: absolute;
           left: 0px;
-          top: 10px;
+          top: 11px;
           width: 13px;
           height: 12px;
           background-image: url("../img/compare.svg");
@@ -126,12 +123,13 @@ input[type="radio"].visually-hidden {
       }
       &--cart {
         padding-left: 24px;
+        margin-left: auto;
         position: relative;
         &::before {
           content: "";
           position: absolute;
           left: 3px;
-          top: 8px;
+          top: 9px;
           width: 13px;
           height: 12px;
           background-image: url("../img/cart.svg");
@@ -150,10 +148,9 @@ input[type="radio"].visually-hidden {
     display: flex;
     flex-flow: row wrap;
     align-items: baseline;
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: "Gilroy-extrabold", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
-    font-weight: 800;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     &-item  {
@@ -185,10 +182,10 @@ input[type="radio"].visually-hidden {
         margin-right: auto;
       }
       &--delivery {
-        margin-right: 35px;
+        margin-right: 33px;
       }
       &--warranty {
-        margin-right: 107px;
+        margin-right: 109px;
       }
       &--contacts {
         margin-right: -4px;
@@ -203,10 +200,9 @@ input[type="radio"].visually-hidden {
     padding: 0;
     margin: 0;
     display: none;
-    font-family: OpenSans, Arial, sans-serif;
+    font-family: "OpenSans-light", Arial, sans-serif;
     font-size: 15px;
     line-height: 36px;
-    font-weight: 300;
     letter-spacing: 0.01em;
     text-transform: none;
     position: absolute;
@@ -331,10 +327,13 @@ input[type="radio"].visually-hidden {
     }
     &__text-wrapper {
       width: 560px;
-      height: 100%;
+      height: 486px;
       display: flex;
       flex-flow: column nowrap;
+      justify-content: space-between;
+
       padding-top: 79px;
+      padding-bottom: 7px;
       position: relative;
       &::before {
         content: "";
@@ -347,10 +346,9 @@ input[type="radio"].visually-hidden {
       }
     }
     &__number {
-      font-family: Gilroy, Arial, sans-serif;
+      font-family: "Gilroy-extrabold", Arial, sans-serif;
       font-size: 179.2px;
       line-height: 179.2px;
-      font-weight: 800;
       letter-spacing: 0.01em;
       color: #ffffff;
       position: absolute;
@@ -359,30 +357,26 @@ input[type="radio"].visually-hidden {
     }
     &__slogan {
       margin: 0;
-      font-family: Gilroy, Arial, sans-serif;
+      font-family: "Gilroy-extrabold", Arial, sans-serif;
       font-size: 47px;
       line-height: 56px;
-      font-weight: 800;
       letter-spacing: 0.01em;
       color: #000000;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       z-index: 2;
     }
     &__desc {
       margin: 0;
-      font-family: OpenSans, Arial, sans-serif;
+      font-family: "OpenSans-light", Arial, sans-serif;
       font-size: 15px;
       line-height: 30px;
-      font-weight: 300;
       letter-spacing: 0.01em;
       color: #464646;
-      margin-bottom: 42px;
     }
     &__btn {
-      font-family: Gilroy, Arial, sans-serif;
+      font-family: "Gilroy-extrabold", Arial, sans-serif;
       font-size: 18px;
       line-height: 24px;
-      font-weight: 800;
       letter-spacing: 0.2em;
       color: #000000;
       text-transform: uppercase;
@@ -391,6 +385,7 @@ input[type="radio"].visually-hidden {
       text-align: center;
       padding: 8px 0;
       margin-bottom: 50px;
+      margin-top: auto;
       &:hover::before {
         height: 100%;
       }
@@ -403,7 +398,7 @@ input[type="radio"].visually-hidden {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%; -50%);
+        transform: translate(-50%, -50%);
         transition: height 0.5s;
       }
     }
@@ -420,19 +415,17 @@ input[type="radio"].visually-hidden {
       }
       &-cell {
         &:first-child {
-          font-family: Gilroy, Arial, sans-serif;
+          font-family: "Gilroy-light", Arial, sans-serif;
           font-size: 36px;
           line-height: 48px;
-          font-weight: 300;
           letter-spacing: 0.01em;
           color: #000000;
           margin-bottom: 8px;
         }
         &:nth-child(2) {
-          font-family: OpenSans, Arial, sans-serif;
+          font-family: "OpenSans-light", Arial, sans-serif;
           font-size: 13px;
           line-height: 20px;
-          font-weight: 300;
           letter-spacing: 0.01em;
           color: #464646;
         }
@@ -486,10 +479,9 @@ input[type="radio"].visually-hidden {
     &-name {
       margin: 0;
       order: 2;
-      font-family: Gilroy, Arial, sans-serif;
+      font-family: "Gilroy-extrabold", Arial, sans-serif;
       font-size: 18px;
       line-height: 24px;
-      font-weight: 800;
       letter-spacing: 0.01em;
       color: #000000;
     }
@@ -509,7 +501,7 @@ input[type="radio"].visually-hidden {
       transition: background-color 0.3s;
       &-down .categories__img {
         top: 100%;
-        transform: translate(-50%, -100%;);
+        transform: translate(-50%, -100%);
       }
     }
   }
@@ -563,10 +555,9 @@ input[type="radio"].visually-hidden {
       right: -4px;
     }
     &-btn {
-      font-family: Gilroy, Arial, sans-serif;
+      font-family: "Gilroy-extrabold", Arial, sans-serif;
       font-size: 18px;
       line-height: 24px;
-      font-weight: 800;
       letter-spacing: 0.2em;
       color: #000000;
       text-transform: uppercase;
@@ -658,20 +649,18 @@ input[type="radio"].visually-hidden {
     }
     &-name {
       margin: 0;
-      font-family: Gilroy, Arial, sans-serif;
+      font-family: "Gilroy-extrabold", Arial, sans-serif;
       font-size: 47px;
       line-height: 48px;
-      font-weight: 800;
       letter-spacing: 0.01em;
       color: #000000;
       margin-bottom: 32px;
     }
     &-desc {
       margin: 0;
-      font-family: OpenSans, Arial, sans-serif;
+      font-family: "OpenSans-light", Arial, sans-serif;
       font-size: 15px;
       line-height: 30px;
-      font-weight: 300;
       letter-spacing: 0.01em;
       color: #464646;
       width: 436px;
@@ -720,7 +709,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  margin-bottom: 82px;
+  margin-bottom: 80px;
 
 }
 
@@ -739,20 +728,18 @@ input[type="radio"].visually-hidden {
   }
   &__heading {
     margin: 0;
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: "Gilroy-extrabold", Arial, sans-serif;
     font-size: 47px;
     line-height: 48px;
-    font-weight: 800;
     letter-spacing: 0.01em;
     color: #000000;
     margin-bottom: 14px;
   }
   &__desc {
     margin: 0;
-    font-family: OpenSans, Arial, sans-serif;
+    font-family: "OpenSans-light", Arial, sans-serif;
     font-size: 15px;
     line-height: 30px;
-    font-weight: 300;
     color: #464646;
     padding-right: 125px;
     white-space: pre-line;
@@ -763,19 +750,17 @@ input[type="radio"].visually-hidden {
     margin: 0;
     padding: 0;
     list-style-image: url("../img/slider-buttonx.png");
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: "Gilroy-extrabold", Arial, sans-serif;
     font-size: 16px;
     line-height: 40px;
-    font-weight: 800;
     color: #000000;
     padding-left: 35px;
     margin-bottom: 54px;
   }
   &__btn {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: "Gilroy-extrabold", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
-    font-weight: 800;
     letter-spacing: 0.2em;
     color: #000000;
     text-transform: uppercase;
@@ -796,7 +781,7 @@ input[type="radio"].visually-hidden {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%; -50%);
+      transform: translate(-50%, -50%);
       transition: height 0.5s;
     }
   }
@@ -817,20 +802,18 @@ input[type="radio"].visually-hidden {
   }
   &__heading {
     margin: 0;
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: "Gilroy-extrabold", Arial, sans-serif;
     font-size: 47px;
     line-height: 48px;
-    font-weight: 800;
     letter-spacing: 0.01em;
     color: #000000;
     margin-bottom: 44px;
   }
   &__desc {
     margin: 0;
-    font-family: OpenSans, Arial, sans-serif;
+    font-family: "OpenSans-light", Arial, sans-serif;
     font-size: 15px;
     line-height: 30px;
-    font-weight: 300;
     color: #464646;
     margin-bottom: 38px;
   }
@@ -842,10 +825,9 @@ input[type="radio"].visually-hidden {
     height: 222px;
   }
   &__btn {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: "Gilroy-extrabold", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
-    font-weight: 800;
     letter-spacing: 0.2em;
     color: #000000;
     text-transform: uppercase;
@@ -866,7 +848,7 @@ input[type="radio"].visually-hidden {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%; -50%);
+      transform: translate(-50%, -50%);
       transition: height 0.5s;
     }
   }
@@ -884,7 +866,7 @@ input[type="radio"].visually-hidden {
   width: 1160px;
   margin: 0 auto;
   padding: 0;
-  padding-top: 56px;
+  padding-top: 55px;
   padding-bottom: 60px;
   &__row {
     display: flex;
@@ -907,9 +889,8 @@ input[type="radio"].visually-hidden {
     }
   }
   &__logo {
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: "Gilroy-extrabold", Arial, sans-serif;
     font-size: 48px;
-    font-weight: 800;
     letter-spacing: 0.01em;
     color: #ffc600;
     text-transform: uppercase;
@@ -930,10 +911,9 @@ input[type="radio"].visually-hidden {
     flex-flow: row wrap;
     justify-content: flex-end;
     align-items: center;
-    font-family: OpenSans, Arial, sans-serif;
+    font-family: "OpenSans-light", Arial, sans-serif;
     font-size: 15px;
     line-height: 36px;
-    font-weight: 300;
     letter-spacing: 0.01em;
     color: #ffffff;
     &-item {
@@ -970,7 +950,7 @@ input[type="radio"].visually-hidden {
       }
       &--compare {
         padding-left: 20px;
-        margin-left: 44px;
+        margin-left: 42px;
         &::before {
           content: "";
           position: absolute;
@@ -984,7 +964,7 @@ input[type="radio"].visually-hidden {
       }
       &--cart {
         padding-left: 24px;
-        margin-left: 41px;
+        margin-left: 39px;
         &::before {
           content: "";
           position: absolute;
@@ -1002,10 +982,9 @@ input[type="radio"].visually-hidden {
     }
   }
   &__adress {
-    font-family: OpenSans, Arial, sans-serif;
+    font-family: "OpenSans-light", Arial, sans-serif;
     font-size: 15px;
     line-height: 30px;
-    font-weight: 300;
     color: #ffffff;
     margin: 0;
     margin-right: 146px;
@@ -1018,10 +997,9 @@ input[type="radio"].visually-hidden {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    font-family: Gilroy, Arial, sans-serif;
+    font-family: "Gilroy-extrabold", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
-    font-weight: 800;
     letter-spacing: 0.2em;
     color: #ffffff;
     text-transform: uppercase;
@@ -1040,10 +1018,9 @@ input[type="radio"].visually-hidden {
     }
   }
   &__phone {
-    font-family: OpenSans, Arial, sans-serif;
+    font-family: "OpenSans-light", Arial, sans-serif;
     font-size: 15px;
     line-height: 30px;
-    font-weight: 300;
     color: #ffffff;
     margin: 0;
     margin-left: auto;
@@ -1090,6 +1067,516 @@ input[type="radio"].visually-hidden {
     }
     &:active {
       opacity: 0.3;
+    }
+  }
+}
+
+//
+//
+// каталог
+//
+//
+
+.catalog-page .index-header {
+  padding-bottom: 50px;
+  margin-bottom: 37px;
+}
+
+.title {
+  width: 1040px;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 46px;
+  &__heading {
+    font-family: Gilroy-extrabold, Arial, sans-serif;
+    font-size: 47px;
+    line-height: 48px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+}
+
+.breadcrumbs {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  &__item {
+    font-family: OpenSans-light, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    color: #000000;
+    position: relative;
+    &:not(&--current) {
+      padding-right: 37px;
+      &::before {
+        content: '';
+        background-image: url("../img/nav-arrow.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+        width: 4px;
+        height: 7px;
+      }
+    }
+    &--current {
+
+    }
+  }
+  &__link {
+    opacity: 0.3;
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.1;
+    }
+  }
+}
+
+.catalog {
+  width: 1160px;
+  padding: 0;
+  padding-left: 60px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 4px;
+  &__col {
+    display: flex;
+    flex-flow: column wrap;
+    width: 832px;
+    padding-left: 72px;
+  }
+  &__wrap {
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+.filter {
+  width: 268px;
+  position: relative;
+  &::before {
+    content: "";
+    width: 2000px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.08);
+    z-index: -2;
+  }
+  &__form {
+    padding-top: 68px;
+  }
+  &__heading {
+    margin: 0;
+    display: table-cell;
+    height: 70px;
+    width: 269px;
+    vertical-align: middle;
+    font-family: Gilroy-extrabold, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: 0.23em;
+    color: #000000;
+    text-transform: uppercase;
+    position: relative;
+  }
+  &__set {
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 201px;
+    border-top: 2px solid black;
+    &-title {
+      font-family: Gilroy-extrabold, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: #000000;
+      float: left;
+      margin-top: 10px;
+    }
+  }
+  &__btn {
+    font-family: Gilroy-extrabold, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 29.9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #000000;
+    display: block;
+    width: 200px;
+    height: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 8px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: #f0c52e;
+      transition: height 0.4s;
+      z-index: -1;
+    }
+    &:hover::before {
+      height: 100%;
+    }
+  }
+}
+
+.sort {
+  position: relative;
+  height: 70px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  &::before {
+    content: "";
+    width: 2000px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 270px);
+    transform: translateX(-50%);
+    background-color: rgba(0,0,0,0.08);
+    z-index: -2;
+  }
+  &__heading {
+    font-family: Gilroy-extrabold, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: 0.23em;
+    color: #000000;
+    text-transform: uppercase;
+    margin: 0;
+    margin-right: 44px;
+  }
+  &__type {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-family: OpenSans, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #000000;
+    &-item {
+      margin-right: 17px;
+      opacity: 0.3;
+      &:not(&--current) {
+        &:hover {
+          opacity: 0.6;
+        }
+        &:active {
+          opacity: 1;
+        }
+      }
+      &--current {
+        opacity: 1;
+        pointer-events: inherit;
+      }
+    }
+    &-btn {
+      background-color: transparent;
+      border: none;
+    }
+  }
+  &__order {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-left: auto;
+    &-item {
+      opacity: 0.3;
+      &:not(&--current) {
+        &:hover {
+          opacity: 0.6;
+        }
+        &:active {
+          opacity: 1;
+        }
+      }
+      &--current {
+        opacity: 1;
+      }
+    }
+    &-btn {
+      width: 11px;
+      height: 10px;
+      padding: 0;
+      position: relative;
+      border: none;
+      background-color: transparent;
+      &--up {
+        margin-right: 20px;
+        &::before {
+          content: "";
+          background-image: url("../img/icon-up-dir.svg");
+          background-repeat: no-repeat;
+          position: absolute;
+          width: 11px;
+          height: 10px;
+          top: 0;
+          left: 0;
+        }
+      }
+      &--down {
+        &::before {
+          content: "";
+          background-image: url("../img/icon-down-dir.svg");
+          background-repeat: no-repeat;
+          position: absolute;
+          width: 11px;
+          height: 10px;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+.product {
+  &-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 58px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  &-item {
+    width: 360px;
+    margin-right: 40px;
+    margin-top: 11px;
+    height: 495px;
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    &--new::after {
+        content: "NEW";
+        position: absolute;
+        top: 29px;
+        right: 26px;
+        width: 60px;
+        height: 60px;
+        border: 2px solid black;
+        opacity: 0.2;
+        font-family: Gilroy-extrabold, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: #000000;
+        text-align: center;
+        padding: 16px 0;
+        border-radius: 50%;
+      }
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &__img {
+      position: relative;
+      width: 360px;
+      height: 380px;
+      &-wrap {
+        position: relative;
+        width: 360px;
+        height: 380px;
+        margin-bottom: 32px;
+        &:hover .product-item__img-hover {
+          display: flex;
+        }
+      }
+      &-hover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+        flex-flow: column nowrap;
+        padding-top: 170px;
+        align-items: center;
+        background-color: rgba(238,238,238,0.7);
+        z-index: 1;
+      }
+    }
+    &__title {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      &-name {
+        font-family: Gilroy-extrabold, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        color: #000000;
+        white-space: pre-line;
+        &:hover {
+          opacity: 0.6;
+        }
+        &:active {
+          opacity: 0.3;
+        }
+      }
+      &-cost {
+        font-family: Gilroy-light, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+        letter-spacing: 0.01em;
+        color: #464646;
+        white-space: nowrap;
+      }
+    }
+    &__btn-cart {
+      font-family: Gilroy-extrabold, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: #000000;
+      border: none;
+      background-color: transparent;
+      text-transform: uppercase;
+      height: 40px;
+      width: 200px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      &:active {
+        color: rgba(0,0,0,0.3);
+      }
+      &::before {
+        content: "";
+        width: 100%;
+        height: 8px;
+        background-color: #f0c52e;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: -1;
+        transition: height 0.4s;
+      }
+      &:hover::before {
+        height: 100%;
+      }
+    }
+    &__btn-compare {
+      opacity: 0.5;
+      font-family: OpenSans-light, Arial, sans-serif;
+      font-size: 13px;
+      line-height: 36px;
+      font-weight: 300;
+      letter-spacing: 0.01em;
+      color: #000000;
+      border: none;
+      background-color: transparent;
+      &:hover {
+        opacity: 1;
+      }
+      &:active {
+        opacity: 0.2;
+      }
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  height: 70px;
+  background-color: rgba(0,0,0,0.08);
+  margin-bottom: 73px;
+  &__btn {
+    padding: 0 30px;
+    font-family: Gilroy-extrabold, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #000000;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    &:hover {
+      background-color: rgba(0,0,0,0.08);
+    }
+    &:active {
+      background-color: rgba(0,0,0,0.08);
+      color: rgba(0,0,0,0.3);
+    }
+    &--back {
+
+    }
+    &--forward {
+
+    }
+  }
+  &__list {
+    list-style-type: none;
+    padding: 23px 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    font-family: Gilroy-extrabold, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #000000;
+  }
+  &__item {
+    margin: 0 16px;
+  }
+  &__pagenum {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    opacity: 0.3;
+    &--active {
+      opacity: 1;
+      pointer-events: inherit;
+    }
+    &:not(&--active) {
+      &:hover {
+        opacity: 0.6;
+      }
+      &:active {
+        opacity: 1;
+      }
     }
   }
 }
